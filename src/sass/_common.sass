@@ -110,7 +110,9 @@ $gray: #646464
 	position: relative
 	overflow: hidden
 	min-height: 583px
-	background: url(../img/header.jpg) repeat
+	background: #0C283E url(../img/header.jpg) repeat
+	+r(640)
+		padding-bottom: 50px
 	&__in
 		position: relative
 
@@ -119,11 +121,15 @@ $gray: #646464
 		display: inline-block
 		+sprite(logo)
 		margin: 40px 0 49px 48px
+		+r(1000)
+			margin-left: 30px
+		+r(420)
+			margin-left: 0px	
 
 		span 
 			color: white
 			font-family: "Myriad Pro", sans-serif
-			font-size: 31px
+			font-size: 32px
 			font-weight: 700
 			line-height: 33px
 			text-transform: uppercase
@@ -136,8 +142,18 @@ $gray: #646464
 		border: 3px solid #1ce4c6
 		position: relative
 		min-height: 385px
+		+r(1140)
+			padding-right: 450px
 		+r(1000)
-			padding-right: 350px
+			padding-right: 320px
+			padding-left: 30px
+		+r(768)
+			padding-right: 185px	
+		+r(751)
+			padding-right: 40px	
+		+r(420)
+			padding-left: 20px
+			padding-right: 20px	
 		&:before
 			position: absolute
 			background: url(../img/header-bg.png) no-repeat
@@ -164,6 +180,22 @@ $gray: #646464
 				margin-bottom: 15px
 				+r(1080)
 					font-size: 44px
+				+r(768)
+					padding-right: 130px
+				+r(751)
+					padding-right: 0
+					padding-top: 50px
+				+r(640)
+					max-width: 470px
+					font-size: 50px
+					font-weight: 700
+				+r(600)
+					padding-top: 20px
+				+r(550)
+					padding-top: 0	
+				+r(520)
+					font-size: 26px
+					line-height: 1.6	
 
 			p	
 				color: white
@@ -171,6 +203,13 @@ $gray: #646464
 				font-size: 18px
 				font-weight: 400
 				line-height: 26px
+				+r(640)
+					font-size: 28px
+					line-height: 1.3
+				+r(520)
+					font-size: 23px	
+				+r(420)
+					font-size: 19px	
 
 		.picture
 			background: url(../img/pic-lg.png) no-repeat
@@ -190,6 +229,16 @@ $gray: #646464
 			+r(1000)
 				width: 288px
 				height: 227px
+				top: -104px
+			+r(751)
+				top: -120px
+				width: 242px
+				height: 185px	
+			+r(600)
+				width: 170px
+				height: 150px
+			+r(550)
+				display: none		
 
 			&__med
 				position: absolute
@@ -208,6 +257,16 @@ $gray: #646464
 				+r(1000)
 					width: 138px
 					height: 138px	
+					left: -35px
+				+r(751)
+					width: 125px
+					height: 125px
+					left: -66px
+					bottom: -16px
+				+r(600)
+					width: 90px
+					height: 90px
+					left: -30px	
 			&__sm
 				position: absolute
 				top: 382px
@@ -218,15 +277,21 @@ $gray: #646464
 				height: 122px
 				+cover
 				+r(1080)
-					width: 110px
-					height: 110px
 					top: auto
-					bottom: -130px
-					left: 68px
+					left: 88px
+					width: 100px
+					height: 100px
+					bottom: -120px
+				+r(900)
+					width: 78px
+					height: 78px
+					bottom: -96px
+				+r(751)
+					display: none		
 
 //sform
 .sform
-	background: url(../img/form-bg.jpg) no-repeat
+	background: #0C283E url(../img/form-bg.jpg) no-repeat
 	min-height: 732px
 	+cover		
 
@@ -242,24 +307,36 @@ $gray: #646464
 		line-height: 43px
 		text-transform: uppercase
 		margin-bottom: 10px
+		+r(500)
+			font-size: 24px
 
 	&__top
 		background-color: #FFF
 		border-radius: 4px
-		height: 62px	
+		min-height: 62px	
 		overflow: hidden
 		margin-bottom: 19px
 		font-size: 0
 		padding-top: 14px
+		+r(751)
+			background-color: transparent
+			border-radius: 0
+			margin-bottom: 0	
 
 		label
 			background-color: #000
 			display: inline-block
 			vertical-align: middle
 			position: relative
-
 			+r(1140)
 				width: 33.3%
+			+r(751)
+				width: 100%
+				display: block
+				background-color: #FFF
+				border-radius: 4px	
+				overflow: hidden
+				margin-bottom: 19px
 
 		input
 			color: #848484
@@ -274,6 +351,12 @@ $gray: #646464
 			border-right: 1px solid #86939d
 			+r(1140)
 				width: 100%
+			+r(751)
+				height: 81px
+				font-size: 28px	
+			+r(500)
+				height: 50px
+				font-size: 19px		
 		
 		.input-company
 			width: 338px
@@ -282,13 +365,25 @@ $gray: #646464
 			border-right: 1px solid #86939d
 			+r(1140)
 				width: 100%
+			+r(751)
+				height: 81px
+				font-size: 28px	
+			+r(500)
+				height: 50px
+				font-size: 19px	
 
 		.input-mail
-			width: 451px
+			width: 420px
 			height: 35px	
 			padding: 0 23px
 			+r(1140)
 				width: 100%
+			+r(751)
+				height: 81px
+				font-size: 28px	
+			+r(500)
+				height: 50px
+				font-size: 19px		
 
 	&__field
 		background-color: #FFF
@@ -305,15 +400,37 @@ $gray: #646464
 			font-size: 16px
 			font-weight: 400
 			padding: 32px 24px
+			+r(751)
+				font-size: 28px
+			+r(500)
+				font-size: 19px	
 
 	&__bottom
 		position: relative
 		+clr
+		+r(950)
+			display: -webkit-box
+			display: -webkit-flex
+			display: -ms-flexbox
+			display: flex
+			-webkit-box-orient: vertical
+			-webkit-box-direction: reverse
+			-webkit-flex-direction: column-reverse
+			-ms-flex-direction: column-reverse
+			flex-direction: column-reverse
+		+r(751)
+			padding-bottom: 104px	
+		.col
+			float: left
+			display: inline-block
+		.col2
+			margin: 0 0 0 17px	
+			+r(950)
+				margin: 0 0 5px
 		.btn
 			width: 225px
 			height: 56px
 			border-radius: 4px
-			float: left
 			color: white
 			font-family: "Myriad Pro", sans-serif
 			font-size: 18px
@@ -327,6 +444,13 @@ $gray: #646464
 				top: 1px
 			&:hover
 				background-color: #07B5A2
+			+r(751)
+				font-size: 33px
+				line-height: 64px
+				height: 64px	
+				margin-bottom: 28px
+			+r(500)
+				font-size: 26px	
 
 		p 
 			max-width: 625px
@@ -337,9 +461,16 @@ $gray: #646464
 			font-size: 16px
 			font-weight: 400
 			line-height: 26px	
-			float: left
 			padding-top: 5px
-			margin: 0 0 0 17px
+			+r(751)
+				font-size: 24px
+				text-align: justify
+				max-width: none
+				text-align: justify
+				padding-top: 0
+				padding-bottom: 7px
+			+r(500)
+				font-size: 19px		
 
 		input[type="checkbox"]
 			display: none	
@@ -352,6 +483,10 @@ $gray: #646464
 			position: relative
 			cursor: pointer
 			clear: both
+			+r(751)
+				width: 100%
+				height: 33px
+				line-height: 35px
 
 			span 
 				color: white
@@ -362,6 +497,11 @@ $gray: #646464
 				font-weight: 400
 				text-decoration: underline	
 				position: relative
+				+r(751)
+					font-size: 27px
+					padding-left: 51px
+				+r(500)
+					font-size: 19px	
 				&:before
 					content: ' '
 					position: absolute
@@ -369,10 +509,18 @@ $gray: #646464
 					top: 0
 					display: block
 					background: url(../img/checkbox.png) no-repeat
+					+cover
 					width: 20px
 					height: 19px
-					z-index: 5				
+					z-index: 5		
+					+r(751)
+						width: 33px
+						height: 33px		
 
 		input[type="checkbox"]:checked + span:before
 			background: url(../img/checked.png) no-repeat
+			+cover
+			+r(751)
+				width: 33px
+				height: 33px
 				
