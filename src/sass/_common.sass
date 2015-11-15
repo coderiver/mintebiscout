@@ -47,11 +47,332 @@
 // p
 // 	+jpg(bla)
 
+html
+	font-size: 62.5%
 
 body
 	font-family: Arial, sans-serif
 	font-size: 12px
-	line-height: 1.4
+	line-height: 1
+
+*
+	+box
+
+//variables
+$blue: #113752
+$gray: #646464
+// icons
+.ico
+	display: inline-block
+	vertical-align: middle
+	&-utilites
+		+sprite(ico-utilites)
+	&-technology
+		+sprite(ico-technology)
+	&-media
+		+sprite(ico-media)
+	&-marketing
+		+sprite(ico-marketing)
+	&-industrial
+		+sprite(ico-industrial)
+	&-helthcare
+		+sprite(ico-helthcare)
+	&-finance
+		+sprite(ico-finance)
+	&-energy
+		+sprite(ico-energy)
+	&-consumer
+		+sprite(ico-consumer)							
+
+//fonts
++font(helvetica-bold, helveticaneuecyr-bold)
+
+//buttons
+.btn
+	border-radius: 4px
+	height: 40px
+
+	&.is-aqua
+		background-color: #06dbc4
+
+//ALL styles
+.header__in, .sform__in
+	display: block
+	max-width: 1140px
+	width: 100%
+	margin: auto
+	+r(1140)
+		padding: 0 23px
 
 
-// common blocks
+//header
+.header
+	position: relative
+	overflow: hidden
+	min-height: 583px
+	background: url(../img/header.jpg) repeat
+	&__in
+		position: relative
+
+	.logo		
+		font-size: 0
+		display: inline-block
+		+sprite(logo)
+		margin: 40px 0 49px 48px
+
+		span 
+			color: white
+			font-family: "Myriad Pro", sans-serif
+			font-size: 31px
+			font-weight: 700
+			line-height: 33px
+			text-transform: uppercase
+			display: inline-block
+			padding-top: 2px
+			padding-left: 160px
+
+	&__bl
+		padding: 40px 500px 40px 45px
+		border: 3px solid #1ce4c6
+		position: relative
+		min-height: 385px
+		+r(1000)
+			padding-right: 350px
+		&:before
+			position: absolute
+			background: url(../img/header-bg.png) no-repeat
+			content: ' '
+			display: block
+			width: 1154px
+			height: 528px
+			z-index: 0
+			top: -91px
+			left: 92px
+
+		.text
+			color: #fff
+
+
+			h1
+				color: white
+				font-family: helvetica-bold, sans-serif
+				font-size: 50px
+				font-weight: 700
+				letter-spacing: 0.1em
+				line-height: 50px
+				text-transform: uppercase
+				margin-bottom: 15px
+				+r(1080)
+					font-size: 44px
+
+			p	
+				color: white
+				font-family: "Myriad Pro"
+				font-size: 18px
+				font-weight: 400
+				line-height: 26px
+
+		.picture
+			background: url(../img/pic-lg.png) no-repeat
+			+cover
+			display: block
+			width: 499px
+			height: 353px
+			position: absolute
+			right: -96px
+			top: -58px	
+			+r(1210)
+				right: -70px
+			+r(1140)
+				width: 380px
+				height: 353px	
+				right: -26px
+			+r(1000)
+				width: 288px
+				height: 227px
+
+			&__med
+				position: absolute
+				top: 197px
+				left: -55px
+				background: url(../img/pic-md.png) no-repeat
+				+cover
+				display: block
+				width: 217px
+				height: 217px
+				+r(1140)
+					width: 180px
+					height: 180px
+					top: auto
+					bottom: -39px
+				+r(1000)
+					width: 138px
+					height: 138px	
+			&__sm
+				position: absolute
+				top: 382px
+				left: 138px
+				background: url(../img/pic-sm.png) no-repeat
+				display: block
+				width: 122px
+				height: 122px
+				+cover
+				+r(1080)
+					width: 110px
+					height: 110px
+					top: auto
+					bottom: -130px
+					left: 68px
+
+//sform
+.sform
+	background: url(../img/form-bg.jpg) no-repeat
+	min-height: 732px
+	+cover		
+
+	.waves
+		+sprite(waves)
+		margin-bottom: 30px	
+
+	h2
+		color: white
+		font-family: "Myriad Pro", sans-serif
+		font-size: 30px
+		font-weight: 400
+		line-height: 43px
+		text-transform: uppercase
+		margin-bottom: 10px
+
+	&__top
+		background-color: #FFF
+		border-radius: 4px
+		height: 62px	
+		overflow: hidden
+		margin-bottom: 19px
+		font-size: 0
+		padding-top: 14px
+
+		label
+			background-color: #000
+			display: inline-block
+			vertical-align: middle
+			position: relative
+
+			+r(1140)
+				width: 33.3%
+
+		input
+			color: #848484
+			font-family: "Myriad Pro", sans-serif
+			font-size: 16px
+			font-weight: 400	
+
+		.input-name
+			width: 351px
+			height: 35px
+			padding: 0px 26px
+			border-right: 1px solid #86939d
+			+r(1140)
+				width: 100%
+		
+		.input-company
+			width: 338px
+			height: 35px
+			padding: 0 33px
+			border-right: 1px solid #86939d
+			+r(1140)
+				width: 100%
+
+		.input-mail
+			width: 451px
+			height: 35px	
+			padding: 0 23px
+			+r(1140)
+				width: 100%
+
+	&__field
+		background-color: #FFF
+		border-radius: 4px
+		height: 334px
+		overflow: hidden
+		margin-bottom: 27px
+		textarea
+			width: 100%
+			height: 100%
+			min-height: 100%	
+			color: #848484
+			font-family: "Myriad Pro", sans-serif
+			font-size: 16px
+			font-weight: 400
+			padding: 32px 24px
+
+	&__bottom
+		position: relative
+		+clr
+		.btn
+			width: 225px
+			height: 56px
+			border-radius: 4px
+			float: left
+			color: white
+			font-family: "Myriad Pro", sans-serif
+			font-size: 18px
+			font-weight: 400	
+			position: relative
+			+tr(background-color .4s)
+			outline: 0
+			border: 0
+			margin-bottom: 12px
+			&:active
+				top: 1px
+			&:hover
+				background-color: #07B5A2
+
+		p 
+			max-width: 625px
+			overflow: hidden
+			+prevent-text
+			color: white
+			font-family: "Myriad Pro", sans-serif
+			font-size: 16px
+			font-weight: 400
+			line-height: 26px	
+			float: left
+			padding-top: 5px
+			margin: 0 0 0 17px
+
+		input[type="checkbox"]
+			display: none	
+
+		label
+			height: 21px
+			display: block
+			width: 230px
+			line-height: 21px
+			position: relative
+			cursor: pointer
+			clear: both
+
+			span 
+				color: white
+				padding-left: 34px
+				display: block
+				font-family: "Myriad Pro", sans-serif
+				font-size: 14px
+				font-weight: 400
+				text-decoration: underline	
+				position: relative
+				&:before
+					content: ' '
+					position: absolute
+					left: 0
+					top: 0
+					display: block
+					background: url(../img/checkbox.png) no-repeat
+					width: 20px
+					height: 19px
+					z-index: 5				
+
+		input[type="checkbox"]:checked + span:before
+			background: url(../img/checked.png) no-repeat
+				

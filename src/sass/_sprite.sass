@@ -1,6 +1,24 @@
 $icons: (0:0)
-$icons: map-merge($icons,(codedby: (X: 0px, Y:-9px, W: 47px, H: 5px, TW: 49px, TH: 14px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(coderiver: (X: 0px, Y:0px, W: 49px, H: 5px, TW: 49px, TH: 14px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(Layer-137: (X: -447px, Y:-452px, W: 143px, H: 39px, TW: 1141px, TH: 744px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(Shape-2 copy 21: (X: 0px, Y:0px, W: 1141px, H: 448px, TW: 1141px, TH: 744px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(Vector-Smart Object: (X: -599px, Y:-495px, W: 42px, H: 42px, TW: 1141px, TH: 744px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(codedby: (X: -963px, Y:-452px, W: 47px, H: 5px, TW: 1141px, TH: 744px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(coderiver: (X: -910px, Y:-452px, W: 49px, H: 5px, TW: 1141px, TH: 744px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(cup: (X: -197px, Y:-452px, W: 246px, H: 93px, TW: 1141px, TH: 744px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(ico-consumer: (X: -266px, Y:-549px, W: 37px, H: 45px, TW: 1141px, TH: 744px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(ico-energy: (X: -307px, Y:-549px, W: 25px, H: 44px, TW: 1141px, TH: 744px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(ico-finance: (X: -694px, Y:-495px, W: 39px, H: 33px, TW: 1141px, TH: 744px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(ico-helthcare: (X: -197px, Y:-608px, W: 22px, H: 72px, TW: 1141px, TH: 744px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(ico-industrial: (X: -501px, Y:-495px, W: 48px, H: 48px, TW: 1141px, TH: 744px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(ico-marketing: (X: -447px, Y:-495px, W: 50px, H: 50px, TW: 1141px, TH: 744px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(ico-media: (X: -553px, Y:-495px, W: 42px, H: 42px, TW: 1141px, TH: 744px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(ico-technology: (X: -645px, Y:-495px, W: 45px, H: 38px, TW: 1141px, TH: 744px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(ico-utilites: (X: -197px, Y:-549px, W: 65px, H: 55px, TW: 1141px, TH: 744px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(logo: (X: -594px, Y:-452px, W: 142px, H: 27px, TW: 1141px, TH: 744px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(pen: (X: 0px, Y:-452px, W: 193px, H: 292px, TW: 1141px, TH: 744px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(shape: (X: -336px, Y:-549px, W: 2px, H: 35px, TW: 1141px, TH: 744px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(waves: (X: -825px, Y:-452px, W: 81px, H: 7px, TW: 1141px, TH: 744px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(waves2: (X: -740px, Y:-452px, W: 81px, H: 7px, TW: 1141px, TH: 744px, IMG: '../img/icons.png')))
 
 
 // Gets an attribute from the sass map
@@ -13,20 +31,147 @@ $icons: map-merge($icons,(coderiver: (X: 0px, Y:0px, W: 49px, H: 5px, TW: 49px, 
 	width: icon-attr($iconName, W)
 	height: icon-attr($iconName, H)
 	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	$width: icon-attr($iconName, W)
+	$height: icon-attr($iconName, H)
+	width: $width/2
+	height: $height/2
+	$x: icon-attr($iconName, X)
+	$y: icon-attr($iconName, Y)
+	background-position: $x/2 $y/2
+	$tw: icon-attr($iconName, TW) 	
+	$th: icon-attr($iconName, TH)
+	background-size: $tw/2 $th/2  	
+
 
 @mixin s($i)
 	+sprite($i)
+@mixin sp($i)
+	+sprite-position($i)
+@mixin sr($i)
+	+sprite-retina($i)	
 
+//
+//.icon-Layer-137
+//	width: 143px
+//	height: 39px
+//	background-image: url('../img/icons.png')
+//	background-position: -447px -452px
+//
+//.icon-Shape-2 copy 21
+//	width: 1141px
+//	height: 448px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px 0px
+//
+//.icon-Vector-Smart Object
+//	width: 42px
+//	height: 42px
+//	background-image: url('../img/icons.png')
+//	background-position: -599px -495px
 //
 //.icon-codedby
 //	width: 47px
 //	height: 5px
 //	background-image: url('../img/icons.png')
-//	background-position: 0px -9px
+//	background-position: -963px -452px
 //
 //.icon-coderiver
 //	width: 49px
 //	height: 5px
 //	background-image: url('../img/icons.png')
-//	background-position: 0px 0px
+//	background-position: -910px -452px
+//
+//.icon-cup
+//	width: 246px
+//	height: 93px
+//	background-image: url('../img/icons.png')
+//	background-position: -197px -452px
+//
+//.icon-ico-consumer
+//	width: 37px
+//	height: 45px
+//	background-image: url('../img/icons.png')
+//	background-position: -266px -549px
+//
+//.icon-ico-energy
+//	width: 25px
+//	height: 44px
+//	background-image: url('../img/icons.png')
+//	background-position: -307px -549px
+//
+//.icon-ico-finance
+//	width: 39px
+//	height: 33px
+//	background-image: url('../img/icons.png')
+//	background-position: -694px -495px
+//
+//.icon-ico-helthcare
+//	width: 22px
+//	height: 72px
+//	background-image: url('../img/icons.png')
+//	background-position: -197px -608px
+//
+//.icon-ico-industrial
+//	width: 48px
+//	height: 48px
+//	background-image: url('../img/icons.png')
+//	background-position: -501px -495px
+//
+//.icon-ico-marketing
+//	width: 50px
+//	height: 50px
+//	background-image: url('../img/icons.png')
+//	background-position: -447px -495px
+//
+//.icon-ico-media
+//	width: 42px
+//	height: 42px
+//	background-image: url('../img/icons.png')
+//	background-position: -553px -495px
+//
+//.icon-ico-technology
+//	width: 45px
+//	height: 38px
+//	background-image: url('../img/icons.png')
+//	background-position: -645px -495px
+//
+//.icon-ico-utilites
+//	width: 65px
+//	height: 55px
+//	background-image: url('../img/icons.png')
+//	background-position: -197px -549px
+//
+//.icon-logo
+//	width: 142px
+//	height: 27px
+//	background-image: url('../img/icons.png')
+//	background-position: -594px -452px
+//
+//.icon-pen
+//	width: 193px
+//	height: 292px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px -452px
+//
+//.icon-shape
+//	width: 2px
+//	height: 35px
+//	background-image: url('../img/icons.png')
+//	background-position: -336px -549px
+//
+//.icon-waves
+//	width: 81px
+//	height: 7px
+//	background-image: url('../img/icons.png')
+//	background-position: -825px -452px
+//
+//.icon-waves2
+//	width: 81px
+//	height: 7px
+//	background-image: url('../img/icons.png')
+//	background-position: -740px -452px
 //
