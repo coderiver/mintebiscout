@@ -1,19 +1,18 @@
 $(document).ready(function() {
 	
-	// $(document).on("click", function(){
-	// 	$(".js-popup").hide();
-	// });
+	if($(window).width()<751){
 
-	// function scrollFixedElements() {
-	//     var scroll_left = $(this).scrollLeft();
-	//     $(".fixed-element").css({
-	//         left: -scroll_left
-	//     });
-	// }
-	// scrollFixedElements();
-	// $(window).scroll(function(){
-	//     scrollFixedElements()
-	// });
+		$('.js-experts').slick({
+			slidesToShow: 1,
+		  	slidesToScroll: 1,
+		  	infinite: true,
+			arrows: true,
+			dots: false,
+			slide: '.down__col',
+			prevArrow: $('.arrow-left'),
+			nextArrow: $('.arrow-right')
+		})
+	}
 
 	console.log($('body').html());
 });
