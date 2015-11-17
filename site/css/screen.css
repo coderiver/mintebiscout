@@ -148,8 +148,9 @@ h3 { color: #2c2e37; font-family: "Myriad Pro", sans-serif; font-size: 30px; fon
 .sform__bottom p { max-width: 625px; overflow: hidden; -ms-word-break: break-all; word-break: break-all; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto; color: white; font-family: "Myriad Pro", sans-serif; font-size: 16px; font-weight: 400; line-height: 26px; padding-top: 5px; }
 .sform__bottom input[type="checkbox"] { display: none; }
 .sform__bottom label { height: 21px; display: block; width: 230px; line-height: 21px; position: relative; cursor: pointer; clear: both; }
-.sform__bottom label span { color: white; padding-left: 34px; display: block; font-family: "Myriad Pro", sans-serif; font-size: 14px; font-weight: 400; text-decoration: underline; position: relative; }
-.sform__bottom label span:before { content: " "; position: absolute; left: 0; top: 0; display: block; background: url(../img/checkbox.png) no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; width: 20px; height: 19px; z-index: 5; }
+.sform__bottom label span { color: white; margin-left: 34px; display: block; font-family: "Myriad Pro", sans-serif; font-size: 14px; font-weight: 400; text-decoration: underline; position: relative; }
+.sform__bottom label span a { color: #fff; }
+.sform__bottom label span:before { content: " "; position: absolute; left: -34px; top: 0; display: block; background: url(../img/checkbox.png) no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; width: 20px; height: 19px; z-index: 5; }
 .sform__bottom input[type="checkbox"]:checked + span:before { background: url(../img/checked.png) no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 
 .items { min-height: 1333px; position: relative; overflow: hidden; background-color: #f0ebe7; }
