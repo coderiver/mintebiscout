@@ -327,17 +327,35 @@ $gray: #646464
 
 //sform
 .sform
-	background: #0C283E url(../img/form-bg.jpg) no-repeat
+	background: #0C283E
+	// background: #0C283E url(../img/form-bg.jpg) no-repeat
 	min-height: 732px
 	+cover		
 	+r(750)
 		min-height: 0
+	.is-success
+		.sform__thankyou
+			display: block
+		.sform__form
+			display: none
 	.waves
 		+sprite(waves)
 		margin-bottom: 30px	
 		+r(500)
 			margin-bottom: 6px 
-
+	.errortext
+		display: block
+		color: red 
+		display: none
+		margin-bottom: 8px 
+	&__thankyou
+		font-size: 19px 
+		text-align: center
+		color: #fff 
+		margin-top: 15px 
+		line-height: 1.4 
+		display: none
+		padding-bottom: 40px 
 	h2
 		margin-bottom: 10px
 		+r(500)
@@ -681,12 +699,15 @@ $gray: #646464
 		// 	width: 100%
 		// 	margin: 30px 0
 
-		> img
+		img
 			display: inline-block
 			vertical-align: middle
 			max-width: 100%
 			display: block
 			width: 100%  
+			+rm(500)
+				width: 80%
+				margin: 0 auto 
 
 	.col-1
 		text-align: right
@@ -697,7 +718,7 @@ $gray: #646464
 	.col-2
 		text-align: center
 		position: relative
-		top: -10px 
+		// top: -10px 
 		.brand
 			img
 				display: inline-block
@@ -980,8 +1001,13 @@ $gray: #646464
 			padding: 0
 
 	&__pic	
-		+sprite(about)
+		// +sprite(about)
 		float: left
+		width: 151px 
+		height: 151px 
+		border-radius: 50%
+		background: url(../img/and.jpg) no-repeat 0 0
+		background-size: cover  
 		+r(930)
 			display: none
 	&__ico-small

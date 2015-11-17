@@ -29,6 +29,7 @@ $(document).ready(function() {
 	var error = 0;
 	$('.js-submit').click(function(event) {
 		event.preventDefault(); 
+		$('.errortext').hide();
 		$('.js-form input,.js-form textarea').removeClass('is-error');
 		error = 0;
 		if($('.input-name').val()=='') {
@@ -52,7 +53,11 @@ $(document).ready(function() {
 		}
 		
 		if(error!=1){
-			// here goes submit
+			//BEGIN THIS IS DUMMY _ REMOVE THIS IN FUTURE
+			$('.js-form').addClass('is-success');
+			setTimeout(function(){$('.js-form').removeClass("is-success");}, 5000);
+			//END THIS IS DUMMY _ REMOVE THIS IN FUTURE
+
 			$.ajax({
 				type: "POST",
 				url: "/send.php",
@@ -60,9 +65,12 @@ $(document).ready(function() {
 				success: function(data) {
 					$('.js-form').addClass('is-success');
 					console.log(data);
-					setTimeout(function(){$('.form').removeClass("is-success");}, 5000);
+					setTimeout(function(){$('.js-form').removeClass("is-success");}, 5000);
 				}
 			});
+		}
+		else{
+			$('.errortext').show();
 		}
 		return false;
 	});

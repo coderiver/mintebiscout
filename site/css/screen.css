@@ -113,8 +113,12 @@ h3 { color: #2c2e37; font-family: "Myriad Pro", sans-serif; font-size: 30px; fon
 .header__bl .picture__med { position: absolute; top: 197px; left: -55px; background: url(../img/pic-md.png) no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; display: block; width: 217px; height: 217px; }
 .header__bl .picture__sm { position: absolute; top: 382px; left: 138px; background: url(../img/pic-sm.png) no-repeat; display: block; width: 122px; height: 122px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 
-.sform { background: #0C283E url(../img/form-bg.jpg) no-repeat; min-height: 732px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+.sform { background: #0C283E; min-height: 732px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+.sform .is-success .sform__thankyou { display: block; }
+.sform .is-success .sform__form { display: none; }
 .sform .waves { background-image: url("../img/icons.png"); width: 81px; height: 7px; background-position: -449px -452px; margin-bottom: 30px; }
+.sform .errortext { display: block; color: red; display: none; margin-bottom: 8px; }
+.sform__thankyou { font-size: 19px; text-align: center; color: #fff; margin-top: 15px; line-height: 1.4; display: none; padding-bottom: 40px; }
 .sform h2 { margin-bottom: 10px; }
 .sform__top { background-color: #FFF; -webkit-border-radius: 4px; border-radius: 4px; min-height: 62px; overflow: hidden; margin-bottom: 19px; font-size: 0; padding-top: 14px; }
 .sform__top label { background-color: #000; display: inline-block; vertical-align: middle; position: relative; }
@@ -165,9 +169,9 @@ h3 { color: #2c2e37; font-family: "Myriad Pro", sans-serif; font-size: 30px; fon
 .logos__in { max-width: 764px; width: 100%; margin: auto; padding: 59px 0; }
 .logos .col { display: inline-block; vertical-align: middle; width: 33.3%; text-align: center; font-size: 0; }
 .logos .col:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.logos .col > img { display: inline-block; vertical-align: middle; max-width: 100%; display: block; width: 100%; }
+.logos .col img { display: inline-block; vertical-align: middle; max-width: 100%; display: block; width: 100%; }
 .logos .col-1 { text-align: right; }
-.logos .col-2 { text-align: center; position: relative; top: -10px; }
+.logos .col-2 { text-align: center; position: relative; }
 .logos .col-2 .brand img { display: inline-block; }
 .logos .col-3 { text-align: left; }
 .logos .brand { filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale"); filter: gray; -webkit-filter: grayscale(100%); filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=1); -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(grayScale=1)"; cursor: pointer; }
@@ -200,7 +204,7 @@ h3 { color: #2c2e37; font-family: "Myriad Pro", sans-serif; font-size: 30px; fon
 .about h4 { color: rgba(12, 40, 63, 0.89); font-size: 36px; font-weight: 700; line-height: 1.2; margin-bottom: 23px; }
 .about p, .about a { font-size: 16px; font-weight: 400; line-height: 29px; color: rgba(12, 40, 63, 0.89); font-family: "Open Sans", sans-serif; }
 .about .wrp { padding-left: 185px; }
-.about__pic { background-image: url("../img/icons.png"); width: 152px; height: 152px; background-position: 0px -452px; float: left; }
+.about__pic { float: left; width: 151px; height: 151px; -webkit-border-radius: 50%; border-radius: 50%; background: url(../img/and.jpg) no-repeat 0 0; background-size: cover; }
 .about__ico-small { float: left; background-image: url("../img/icons.png"); width: 60px; height: 60px; background-position: -294px -495px; margin-right: 15px; display: none; }
 .about a { font-weight: 700; display: block; text-decoration: none; }
 .about a.is-mod { margin-top: 30px; }
@@ -320,6 +324,8 @@ h3 { color: #2c2e37; font-family: "Myriad Pro", sans-serif; font-size: 30px; fon
 @media only screen and (max-width: 520px){
  .header__bl .text h1{ font-size: 26px; line-height: 1.3; }
  .header__bl .text p{ font-size: 23px; } }
+@media only screen and (min-width: 500px){
+ .logos .col img{ width: 80%; margin: 0 auto; } }
 @media only screen and (max-width: 500px){
  .sform .waves{ margin-bottom: 6px; }
  .sform h2{ font-size: 24px; margin-bottom: -10px; }
