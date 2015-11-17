@@ -165,7 +165,9 @@ h3 { color: #2c2e37; font-family: "Myriad Pro", sans-serif; font-size: 30px; fon
 .items .item__bl .ico { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 2; }
 .items__name { color: #2c2e37; font-family: "Myriad Pro", sans-serif; font-size: 18px; font-weight: 400; line-height: 24px; text-align: center; min-height: 95px; margin-bottom: 27px; }
 
-.logos { min-height: 180px; background-color: #5e5e5e; font-size: 0; }
+.logos { background-color: #5e5e5e; font-size: 0; text-align: center; }
+.logos__item { display: inline-block; width: 25%; padding: 15px; }
+.logos__item img { max-width: 100%; display: block; margin: 0 auto; }
 .logos__in { max-width: 764px; width: 100%; margin: auto; padding: 59px 0; }
 .logos .col { display: inline-block; vertical-align: middle; width: 33.3%; text-align: center; font-size: 0; }
 .logos .col:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
