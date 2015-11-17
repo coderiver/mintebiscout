@@ -12,7 +12,9 @@
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,700italic,700,600italic,400italic,600,300italic,300,800italic' rel='stylesheet' type='text/css'>
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
-	<script src="js/app.js"></script>
+	<script src="js/app.js" type="text/javascript"></script>
+	<script>
+	alert('a');</script>
 </head>
 <body>
 <!-- BEGIN  out-->
@@ -37,21 +39,21 @@
 		</div>
 	</header>
 	<section class="sform">
-		<div class="sform__in">
+		<form class="sform__in js-form" action="/" method="POST">
 			<div class="waves"></div>
 			<h2>Make your expertise request</h2>
 			<form action="" method="POST">
 				<div class="sform__top">
 					<label><input type="text" class="input-name" placeholder="Your name:"></label>
 					<label><input type="text" class="input-company" placeholder="Company:"></label>
-					<label><input type="email" class="input-mail" placeholder="Your Email:"></label>
+					<label><input type="text" class="input-mail" placeholder="Your Email:"></label>
 				</div>
 				<div class="sform__field">
-					<textarea placeholder="Expertise request:"></textarea>
+					<textarea class="input-request" placeholder="Expertise request:"></textarea>
 				</div>
 				<div class="sform__bottom">
 					<div class="col col1">
-						<button type="button" class="btn is-aqua">Submit</button>
+						<button type="submit" class="js-submit btn is-aqua">Submit</button>
 						<label><input type="checkbox"><span>I Accept the Terms & Conditions</span></label>
 					</div>
 					<div class="col col2">
@@ -59,7 +61,7 @@
 					</div>
 				</div>
 			</form>
-		</div>
+		</form>
 	</section>
 	<section class="items">
 		<div class="items__in">
