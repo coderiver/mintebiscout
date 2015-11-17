@@ -44,6 +44,12 @@ $(document).ready(function() {
 		if(!validateEmail(ema)) {
 				$('.input-mail').addClass('is-error');error = 1;
 			}
+		console.log($('.input-terms').prop('checked'));
+		if(!$('.input-terms').prop('checked')){
+			if(error==0){
+				alert('Please accept Terms and Conditions');error = 1;
+			}
+		}
 		
 		if(error!=1){
 			// here goes submit
